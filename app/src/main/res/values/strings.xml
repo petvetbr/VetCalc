@@ -5,9 +5,15 @@
     <string name="Kg">Kg</string>
     <string name="dose">Dose</string>
     <string name="mg_Kg">mg/Kg</string>
+    <string name="Calcular">Calcular</string>
+    <string name="MenuDosagem">Dosagem</string>
     <string-array name="apresentacoes_array">
         <item>mg/comprimido</item>
         <item>mg/ml</item>
         <item>%</item>
     </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="data_parto">Data parto</string>
+    <string name="title_activity_prenhez">PrenhezActivity</string>
 </resources>
