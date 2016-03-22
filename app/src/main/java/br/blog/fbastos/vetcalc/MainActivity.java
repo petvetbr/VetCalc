@@ -20,14 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setTitle("VetCalc - Dosagem");
         setSupportActionBar(toolbar);
         Spinner spinner = (Spinner) findViewById(R.id.spinnerApresentacao);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.apresentacoes_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
+        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
+        // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
         //spinner.setOnItemSelectedListener();
 
@@ -44,36 +45,39 @@ public class MainActivity extends AppCompatActivity {
                 double peso = Double.parseDouble(txPeso.getText().toString());
                 double dose = Double.parseDouble(txDose.getText().toString());
                 double resultado = dose * peso;
-                txResultado.setText(Double.toString(resultado));
+                txResultado.setText(String.format("%.1f", resultado));
                 Spinner spinner = (Spinner) findViewById(R.id.spinnerApresentacao);
                 int posItem = spinner.getSelectedItemPosition();
-                if (posItem < 0) return;
-                EditText txApresentacao = (EditText) findViewById(R.id.editTextApresentacao);
                 TextView txResultadoApresentacao = (TextView) findViewById(R.id.textViewResultadoApresentacao);
+                txResultadoApresentacao.setText("");
+                if (posItem < 0) {
+                    return;
+                }
+
+                EditText txApresentacao = (EditText) findViewById(R.id.editTextApresentacao);
                 TextView txUnidadeResultadoApresentacao = (TextView) findViewById(R.id.textViewResultadoUnidadesApresentacao);
                 String valorApresentacao = txApresentacao.getText().toString();
-
                 if (valorApresentacao.length() == 0 || posItem < 0) {
-                    txResultadoApresentacao.setText("");
                     return;
                 }
                 double apresentacao = Double.parseDouble(valorApresentacao);
                 switch (posItem) {
                     case 0: {
                         double result = resultado / apresentacao;
-                        txResultadoApresentacao.setText(Double.toString(result));
+
+                        txResultadoApresentacao.setText(String.format("%.1f", result));
                         txUnidadeResultadoApresentacao.setText("Comprimido(s)");
                     }
                     break;
                     case 1: {
                         double result = resultado / apresentacao;
-                        txResultadoApresentacao.setText(Double.toString(result));
+                        txResultadoApresentacao.setText(String.format("%.1f", result));
                         txUnidadeResultadoApresentacao.setText("mL");
                     }
                     break;
                     case 2: {
                         double result = resultado / (apresentacao * 10);
-                        txResultadoApresentacao.setText(Double.toString(result));
+                        txResultadoApresentacao.setText(String.format("%.1f", result));
                         txUnidadeResultadoApresentacao.setText("mL");
                     }
                     break;
