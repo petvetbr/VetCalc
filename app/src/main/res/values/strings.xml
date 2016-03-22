@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">VetCalc</string>
+    <string name="action_settings">Settings</string>
+    <string name="Peso">Peso</string>
+    <string name="Kg">Kg</string>
+    <string name="dose">Dose</string>
+    <string name="mg_Kg">mg/Kg</string>
+    <string-array name="apresentacoes_array">
+        <item>mg/comprimido</item>
+        <item>mg/ml</item>
+        <item>%</item>
+    </string-array>
+</resources>
