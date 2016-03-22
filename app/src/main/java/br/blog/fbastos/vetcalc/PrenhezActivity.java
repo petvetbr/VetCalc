@@ -6,10 +6,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
 
 public class PrenhezActivity extends AppCompatActivity {
+
+    public static java.util.Calendar getCalendarFromDatePicker(DatePicker datePicker) {
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth();
+        int year = datePicker.getYear();
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+
+        return calendar;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +47,29 @@ public class PrenhezActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
         //spinner.setOnItemSelectedListener();
+
+        Button btnCalc = (Button) findViewById(R.id.buttonCalcPrenhez);
+
+        btnCalc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Spinner spinner = (Spinner) findViewById(R.id.spinnerEspecies);
+                String especieSelecionada = spinner.getSelectedItem().toString();
+                HashMap<String, Animal> especies = Config.getEspecies();
+                Animal especie = especies.get(especieSelecionada);
+
+                DatePicker datePicker = (DatePicker) findViewById(R.id.datePickerFecundação);
+                Calendar dataMin = getCalendarFromDatePicker(datePicker);
+                Calendar dataMax = getCalendarFromDatePicker(datePicker);
+                dataMin.add(Calendar.DATE, (int) especie.getGestacao().getMin());
+                dataMax.add(Calendar.DATE, (int) especie.getGestacao().getMax());
+                TextView txMin = (TextView) findViewById(R.id.textViewResultadoMin);
+                TextView txMax = (TextView) findViewById(R.id.textViewResultadoMax);
+                SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                txMin.setText(format.format(dataMin.getTime()));
+                txMax.setText(format.format(dataMax.getTime()));
+            }
+        });
     }
 
     @Override

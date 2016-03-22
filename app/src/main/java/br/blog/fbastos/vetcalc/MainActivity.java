@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
         //spinner.setOnItemSelectedListener();
-
-
         Button btnCalc = (Button) findViewById(R.id.buttonCalc);
 
         btnCalc.setOnClickListener(new View.OnClickListener() {
