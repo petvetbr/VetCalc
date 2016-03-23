@@ -16,6 +16,7 @@ public class DadosClinicosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_dados_clinicos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -35,7 +36,7 @@ public class DadosClinicosActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-        spinner.setOnItemSelectedListener(new EspeciesSpinnerActivity() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 String nomeEspecie = spinner.getSelectedItem().toString();
