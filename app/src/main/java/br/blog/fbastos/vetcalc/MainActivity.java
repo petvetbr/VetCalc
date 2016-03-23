@@ -119,6 +119,10 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), PrenhezActivity.class);
             startActivity(i);
         }
+        if (id == R.id.action_dadosClinicos) {
+            Intent i = new Intent(getApplicationContext(), DadosClinicosActivity.class);
+            startActivity(i);
+        }
         return super.onOptionsItemSelected(item);
     }
 

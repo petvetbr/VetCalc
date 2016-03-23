@@ -21,6 +21,10 @@
         <activity
             android:name=".PrenhezActivity"
             android:label="@string/title_activity_prenhez"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DadosClinicosActivity"
+            android:label="@string/title_activity_dados_clinicos"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -99,6 +99,10 @@ public class PrenhezActivity extends AppCompatActivity {
             return true;
 
         }
+        if (id == R.id.action_dadosClinicos) {
+            Intent i = new Intent(getApplicationContext(), DadosClinicosActivity.class);
+            startActivity(i);
+        }
         return super.onOptionsItemSelected(item);
     }
 }

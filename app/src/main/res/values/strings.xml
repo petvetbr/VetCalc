@@ -24,4 +24,5 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="data_parto">Data parto</string>
     <string name="title_activity_prenhez">PrenhezActivity</string>
+    <string name="title_activity_dados_clinicos">DadosClinicosActivity</string>
 </resources>

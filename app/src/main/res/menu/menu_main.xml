@@ -18,4 +18,9 @@
         android:orderInCategory="100"
         android:title="@string/data_parto"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_dadosClinicos"
+        android:orderInCategory="100"
+        android:title="Parâmetros clínicos"
+        app:showAsAction="never" />
 </menu>
