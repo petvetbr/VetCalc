@@ -1,6 +1,7 @@
 package br.blog.fbastos.vetcalc;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -120,8 +121,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
         if (id == R.id.action_dadosClinicos) {
-            Intent i = new Intent(getApplicationContext(), DadosClinicosActivity.class);
+            Intent i = new Intent(getApplicationContext(), ParametrosClinicos2.class);
             startActivity(i);
+
+//            Intent i = new Intent(getApplicationContext(), DadosClinicosActivity.class);
+//            startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -129,4 +133,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onPesoChange() {
         return false;
     }
+
+    public interface OnFragmentInteractionListener {
+
+        void onFragmentInteraction(Uri uri);
+    }
+
 }
