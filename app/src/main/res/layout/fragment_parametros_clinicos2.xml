@@ -6,8 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.blog.fbastos.vetcalc.ParametrosClinicos2Fragment"
-    tools:showIn="@layout/activity_parametros_clinicos2">
+    tools:context="br.blog.fbastos.vetcalc.ParametrosClinicos2Fragment">
 
     <ScrollView
         android:id="@+id/scrollView"

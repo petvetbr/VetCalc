@@ -86,20 +86,20 @@ public class Main2 extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            setTitle("VetCalc - Dosagem");
+            setTitle("VetUtil - Dosagem");
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.raiz, new DosagemFragment())
                     .addToBackStack(null)
                     .commit();
         } else if (id == R.id.nav_gallery) {
-            setTitle("VetCalc - Data de parto");
+            setTitle("VetUtil - Data de parto");
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.raiz, new PartoFragment())
                     .addToBackStack(null)
                     .commit();
 
         } else if (id == R.id.nav_slideshow) {
-            setTitle("VetCalc - Parâmetros clínicos");
+            setTitle("VetUtil - Parâmetros clínicos");
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.raiz, new ParametrosClinicos2Fragment())
                     .addToBackStack(null)
