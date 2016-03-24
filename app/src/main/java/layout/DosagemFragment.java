@@ -12,6 +12,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
+import br.blog.fbastos.vetcalc.AnaliticsApp;
 import br.blog.fbastos.vetcalc.R;
 
 /**
@@ -28,6 +32,12 @@ public class DosagemFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.fragment_dosagem, container, false);
+
+        // Obtain the shared Tracker instance.
+        AnaliticsApp application = (AnaliticsApp) getActivity().getApplication();
+        Tracker mTracker = application.getDefaultTracker();
+        mTracker.setScreenName("Dosagem");
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
         Spinner spinner = (Spinner) v.findViewById(R.id.spinnerApresentacao);
         // Create an ArrayAdapter using the string array and a default spinner layout

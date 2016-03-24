@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 /**
  * A placeholder fragment containing a simple view.
  */
@@ -22,6 +25,12 @@ public class ParametrosClinicos2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_parametros_clinicos2, container, false);
+
+        AnaliticsApp application = (AnaliticsApp) getActivity().getApplication();
+        Tracker mTracker = application.getDefaultTracker();
+        mTracker.setScreenName("Paramtros");
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+
 
 
         final TextView txFc = (TextView) v.findViewById(R.id.textFC);

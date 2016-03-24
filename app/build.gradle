@@ -12,6 +12,12 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                output.outputFile = file("$project.buildDir/apk/vetcalc.apk")
+            }
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -26,4 +32,8 @@ dependencies {
     compile 'com.android.support:design:23.2.1'
     compile 'com.android.support:support-v4:23.2.1'
     compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-analytics:8.4.0'
+
+
 }
+apply plugin: 'com.google.gms.google-services'

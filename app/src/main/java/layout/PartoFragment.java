@@ -12,10 +12,14 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import br.blog.fbastos.vetcalc.AnaliticsApp;
 import br.blog.fbastos.vetcalc.Animal;
 import br.blog.fbastos.vetcalc.Config;
 import br.blog.fbastos.vetcalc.R;
@@ -46,6 +50,12 @@ public class PartoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View v = inflater.inflate(R.layout.fragment_parto, container, false);
+
+        AnaliticsApp application = (AnaliticsApp) getActivity().getApplication();
+        Tracker mTracker = application.getDefaultTracker();
+        mTracker.setScreenName("Parto");
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+
 
         Spinner spinner = (Spinner) v.findViewById(R.id.spinnerEspecies);
         // Create an ArrayAdapter using the string array and a default spinner layout
