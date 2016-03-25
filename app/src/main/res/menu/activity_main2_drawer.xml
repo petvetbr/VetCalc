@@ -5,15 +5,15 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/drop"
-            android:title="Dosagem" />
+            android:title="@string/dosagem" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_calendar"
-            android:title="Data Parto" />
+            android:title="@string/data_parto" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/clip"
-            android:title="Parâmetros clínicos" />
+            android:title="@string/param_clinicos" />
         <!--<item-->
         <!--android:id="@+id/nav_manage"-->
         <!--android:icon="@drawable/ic_menu_manage"-->

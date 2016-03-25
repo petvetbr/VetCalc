@@ -20,17 +20,21 @@
         <item>Ovina</item>
         <item>Suína</item>
     </string-array>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main2">VetUtil</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="data_parto">Data parto</string>
     <string name="title_activity_prenhez">PrenhezActivity</string>
     <string name="title_activity_dados_clinicos">DadosClinicosActivity</string>
     <string name="title_activity_parametros_clinicos2">ParametrosClinicos2</string>
-
+    <string name="title_dosagem">VetUtil - Dosagem</string>
+    <string name="title_parto">VetUtil - Data de Parto</string>
+    <string name="title_param">VetUtil - Parâmetros clínicos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="VetUtil">VetUtil</string>
+    <string name="param_clinicos">Parâmetros clínicos</string>
+    <string name="dosagem">Dosagem</string>
 </resources>
