@@ -19,6 +19,11 @@
         <item>Ovina</item>
         <item>Suína</item>
     </string-array>
+    <string-array name="unidades_dosagem_array">
+        <item>mg/Kg</item>
+        <item>mg/M² - canino</item>
+        <item>mg/M² - felino</item>
+    </string-array>
     <string name="title_activity_main2">VetUtil</string>
     <string name="data_parto">Data parto</string>
     <string name="title_dosagem">VetUtil - Dosagem</string>
