@@ -81,7 +81,7 @@ public class DosagemFragment extends Fragment {
                         double result = resultado / apresentacao;
 
                         txResultadoApresentacao.setText(String.format("%.1f", result));
-                        txUnidadeResultadoApresentacao.setText("Comprimido(s)");
+                        txUnidadeResultadoApresentacao.setText(getResources().getText(R.string.comprimidos));
                     }
                     break;
                     case 1: {

@@ -28,9 +28,8 @@ public class ParametrosClinicos2Fragment extends Fragment {
 
         AnaliticsApp application = (AnaliticsApp) getActivity().getApplication();
         Tracker mTracker = application.getDefaultTracker();
-        mTracker.setScreenName("Paramtros");
+        mTracker.setScreenName("Parametros");
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
-
 
 
         final TextView txFc = (TextView) v.findViewById(R.id.textFC);
@@ -50,16 +49,17 @@ public class ParametrosClinicos2Fragment extends Fragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                String nomeEspecie = spinner.getSelectedItem().toString();
+                int nomeEspecie = spinner.getSelectedItemPosition();
                 Animal especie = Config.getEspecies().get(nomeEspecie);
                 if (especie == null) {
                     onNothingSelected(parent);
                     return;
                 }
-                txFc.setText(String.format("%1$.0f a %2$.0f BPM", especie.getFc().getMin(), especie.getFc().getMax()));
-                txTemp.setText(String.format("%1$.1f a %2$.1f ºC", especie.getTemp().getMin(), especie.getTemp().getMax()));
-                txFr.setText(String.format("%1$.0f a %2$.0f MPM", especie.getFr().getMin(), especie.getFr().getMax()));
-                txGestacao.setText(String.format("%1$.0f a %2$.0f dias", especie.getGestacao().getMin(), especie.getGestacao().getMax()));
+
+                txFc.setText(String.format(" %1$.0f - %2$.0f %3$s", especie.getFc().getMin(), especie.getFc().getMax(), getResources().getString(R.string.BPM)));
+                txTemp.setText(String.format(" %1$.1f - %2$.1f ºC", especie.getTemp().getMin(), especie.getTemp().getMax()));
+                txFr.setText(String.format(" %1$.0f - %2$.0f %3$s", especie.getFr().getMin(), especie.getFr().getMax(), getResources().getString(R.string.MPM)));
+                txGestacao.setText(String.format(" %1$.0f - %2$.0f %3$s", especie.getGestacao().getMin(), especie.getGestacao().getMax(), getResources().getString(R.string.dias)));
             }
 
             @Override

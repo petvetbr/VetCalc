@@ -28,7 +28,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selecione a espécie: " />
+                    android:text="@string/selecione_especie" />
 
             </LinearLayout>
 
@@ -54,7 +54,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Temperatura: " />
+                    android:text="@string/Temperatura" />
 
                 <TextView
                     android:id="@+id/textTemp"
@@ -72,7 +72,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Frequência Cardiaca: " />
+                    android:text="@string/frequencia_cardiaca" />
 
                 <TextView
                     android:id="@+id/textFC"
@@ -90,7 +90,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Frequência Respiratória: " />
+                    android:text="@string/frequencia_respiratoria" />
 
                 <TextView
                     android:id="@+id/textFR"
@@ -109,7 +109,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gestação: " />
+                    android:text="@string/tempo_gestacao" />
 
                 <TextView
                     android:id="@+id/textGestacao"

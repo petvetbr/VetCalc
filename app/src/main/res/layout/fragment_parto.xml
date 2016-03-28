@@ -16,7 +16,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selecione a espécie:" />
+                android:text="@string/selecione_especie" />
 
         </LinearLayout>
 
@@ -41,7 +41,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data próvavel de fecundação:" />
+                android:text="@string/data_fecundacao" />
 
         </LinearLayout>
 
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Datas mínima e máxima estimada:" />
+                android:text="@string/data_min_max" />
 
         </LinearLayout>
 

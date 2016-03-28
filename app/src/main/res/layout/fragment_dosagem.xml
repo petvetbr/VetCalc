@@ -22,7 +22,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dose Total:" />
+                    android:text="@string/dose_total" />
             </LinearLayout>
 
             <LinearLayout
@@ -59,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dose Apresentação:" />
+                    android:text="@string/dose_apresentacao" />
             </LinearLayout>
 
             <LinearLayout
@@ -159,7 +159,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apresentação:" />
+                    android:text="@string/apresentacao" />
             </LinearLayout>
 
             <LinearLayout

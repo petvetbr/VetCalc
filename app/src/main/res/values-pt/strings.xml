@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">VetUtil</string>
+    <string name="Peso">Peso</string>
+    <string name="Kg">Kg</string>
+    <string name="dose">Dose</string>
+    <string name="mg_Kg">mg/Kg</string>
+    <string name="Calcular">Calcular</string>
+    <string name="MenuDosagem">Dosagem</string>
+    <string-array name="apresentacoes_array">
+        <item>mg/comprimido</item>
+        <item>mg/ml</item>
+        <item>%</item>
+    </string-array>
+    <string-array name="especies_array">
+        <item>Canina</item>
+        <item>Felina</item>
+        <item>Bovina</item>
+        <item>Equina</item>
+        <item>Ovina</item>
+        <item>Suína</item>
+    </string-array>
+    <string name="title_activity_main2">VetUtil</string>
+    <string name="data_parto">Data parto</string>
+    <string name="title_dosagem">VetUtil - Dosagem</string>
+    <string name="title_parto">VetUtil - Data de Parto</string>
+    <string name="title_param">VetUtil - Parâmetros clínicos</string>
+    <string name="navigation_drawer_open">Abrir</string>
+    <string name="navigation_drawer_close">Fechar</string>
+    <string name="VetUtil">VetUtil</string>
+    <string name="param_clinicos">Parâmetros clínicos</string>
+    <string name="dosagem">Dosagem</string>
+    <string name="data_fecundacao">Data próvavel de fecundação: </string>
+    <string name="data_min_max">Datas mínima e máxima estimada: </string>
+    <string name="Temperatura">Temperatura: </string>
+    <string name="frequencia_cardiaca">Frequência Cardiaca: </string>
+    <string name="frequencia_respiratoria">Frequência Respiratória: </string>
+    <string name="tempo_gestacao">Gestação: </string>
+    <string name="BPM">BPM</string>
+    <string name="MPM">MPM</string>
+    <string name="dias">dias</string>
+    <string name="dose_total">Dose Total:</string>
+    <string name="dose_apresentacao">Dose Apresentação: </string>
+    <string name="apresentacao">Apresentação: </string>
+    <string name="comprimidos"> Comprimido(s)</string>
+    <string name="selecione_especie">Selecione espécie: </string>
+</resources>

@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
-import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
@@ -73,8 +73,8 @@ public class PartoFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Spinner spinner = (Spinner) v.findViewById(R.id.spinnerEspecies);
-                String especieSelecionada = spinner.getSelectedItem().toString();
-                HashMap<String, Animal> especies = Config.getEspecies();
+                int especieSelecionada = spinner.getSelectedItemPosition();
+                HashMap<Integer, Animal> especies = Config.getEspecies();
                 Animal especie = especies.get(especieSelecionada);
 
                 DatePicker datePicker = (DatePicker) v.findViewById(R.id.datePickerFecundação);
@@ -84,7 +84,8 @@ public class PartoFragment extends Fragment {
                 dataMax.add(Calendar.DATE, (int) especie.getGestacao().getMax());
                 TextView txMin = (TextView) v.findViewById(R.id.textViewResultadoMin);
                 TextView txMax = (TextView) v.findViewById(R.id.textViewResultadoMax);
-                SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                DateFormat format = DateFormat.getDateInstance();
+                //new SimpleDateFormat("dd/MM/yyyy");
                 txMin.setText(format.format(dataMin.getTime()));
                 txMax.setText(format.format(dataMax.getTime()));
             }

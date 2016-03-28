@@ -1,40 +1,47 @@
 <resources>
     <string name="app_name">VetUtil</string>
-    <string name="action_settings">Settings</string>
-    <string name="Peso">Peso</string>
+    <string name="Peso">Weight</string>
     <string name="Kg">Kg</string>
     <string name="dose">Dose</string>
     <string name="mg_Kg">mg/Kg</string>
-    <string name="Calcular">Calcular</string>
-    <string name="MenuDosagem">Dosagem</string>
+    <string name="Calcular">Calculate</string>
+    <string name="MenuDosagem">Dosage</string>
     <string-array name="apresentacoes_array">
-        <item>mg/comprimido</item>
+        <item>mg/tablet</item>
         <item>mg/ml</item>
         <item>%</item>
     </string-array>
     <string-array name="especies_array">
-        <item>Canina</item>
-        <item>Felina</item>
-        <item>Bovina</item>
-        <item>Equina</item>
-        <item>Ovina</item>
-        <item>Suína</item>
+        <item>Canine</item>
+        <item>Feline</item>
+        <item>Bovine</item>
+        <item>Equine</item>
+        <item>Ovine</item>
+        <item>Swine</item>
     </string-array>
     <string name="title_activity_main2">VetUtil</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="data_parto">Data parto</string>
-    <string name="title_activity_prenhez">PrenhezActivity</string>
-    <string name="title_activity_dados_clinicos">DadosClinicosActivity</string>
-    <string name="title_activity_parametros_clinicos2">ParametrosClinicos2</string>
-    <string name="title_dosagem">VetUtil - Dosagem</string>
-    <string name="title_parto">VetUtil - Data de Parto</string>
-    <string name="title_param">VetUtil - Parâmetros clínicos</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="data_parto">Birth date</string>
+    <string name="title_dosagem">VetUtil - Dosage</string>
+    <string name="title_parto">VetUtil - Birth date</string>
+    <string name="title_param">VetUtil - Clinical parameters</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="VetUtil">VetUtil</string>
-    <string name="param_clinicos">Parâmetros clínicos</string>
-    <string name="dosagem">Dosagem</string>
+    <string name="param_clinicos">Clinical parameters</string>
+    <string name="dosagem">Dosage</string>
+    <string name="data_fecundacao">Conception date: </string>
+    <string name="data_min_max">Estimated birth date (ealiest and latest): </string>
+    <string name="selecione_especie">Species: </string>
+    <string name="Temperatura">Temperature: </string>
+    <string name="frequencia_cardiaca">Hearth rate: </string>
+    <string name="frequencia_respiratoria">Respiratory rate: </string>
+    <string name="tempo_gestacao">Gestation period: </string>
+    <string name="BPM">BPM</string>
+    <string name="MPM">MPM</string>
+    <string name="dias">days</string>
+    <string name="dose_total">Total Dose: </string>
+    <string name="dose_apresentacao">Formulation Dose: </string>
+    <string name="apresentacao">Formulation: </string>
+    <string name="comprimidos"> Tablet(s)</string>
+
 </resources>

@@ -7,14 +7,14 @@ import java.util.HashMap;
  */
 public final class Config {
 
-    private static HashMap<String, Animal> especies;
+    private static HashMap<Integer, Animal> especies;
 
-    public static HashMap<String, Animal> getEspecies() {
+    public static HashMap<Integer, Animal> getEspecies() {
         if (especies == null) CriarEspecies();
         return especies;
     }
 
-    private static void setEspecies(HashMap<String, Animal> especies) {
+    private static void setEspecies(HashMap<Integer, Animal> especies) {
         Config.especies = especies;
     }
 
@@ -162,13 +162,13 @@ public final class Config {
             setMax(39.5);
         }});
 
-        setEspecies(new HashMap<String, Animal>());
-        getEspecies().put(cao.getEspecie(), cao);
-        getEspecies().put(gato.getEspecie(), gato);
-        getEspecies().put(cavalo.getEspecie(), cavalo);
-        getEspecies().put(boi.getEspecie(), boi);
-        getEspecies().put(cabra.getEspecie(), cabra);
-        getEspecies().put(ovelha.getEspecie(), ovelha);
-        getEspecies().put(sui.getEspecie(), sui);
+        setEspecies(new HashMap<Integer, Animal>());
+        getEspecies().put(0, cao);
+        getEspecies().put(1, gato);
+        getEspecies().put(2, cavalo);
+        getEspecies().put(3, boi);
+        getEspecies().put(4, cabra);
+        getEspecies().put(5, ovelha);
+        getEspecies().put(6, sui);
     }
 }
